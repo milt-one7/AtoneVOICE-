@@ -1,0 +1,251 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1a1a2e;
+    color: white;
+}
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f3460;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: left;
+    gap: 0px; /* Space between logo and text */
+}
+
+.logo img {
+    width: 100px;  /* Adjust logo size */
+    height: auto;
+}
+
+
+
+
+/* Desktop Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links .active {
+    color: #ffcc00;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile Responsive Menu */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0f3460;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-links li {
+        padding: 15px 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    animation: bgChange 10s infinite alternate;
+}
+
+@keyframes bgChange {
+    0% { background-image: url('one.jpg'); }
+    50% { background-image: url('four.jpg'); }
+    100% { background-image: url('three.jpg'); }
+}
+
+.hero h1 {
+    font-size: 40px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.hero span {
+    color: #ffcc00;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: black;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.cta-btn:hover {
+    background: #ff5733;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Marquee */
+marquee {
+    background: #ffcc00;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 50px;
+}
+
+.about h2 {
+    color: #ffcc00;
+    font-size: 30px;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 50px;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    background: #0f3460;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.1);
+    background: #ffcc00;
+    color: black;
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 50px;
+    background: #16213e;
+}
+
+.testimonial-slider {
+    font-style: italic;
+    font-size: 18px;
+    animation: slide 8s infinite;
+}
+
+@keyframes slide {
+    0%, 100% { opacity: 0; transform: translateX(-100%); }
+    50% { opacity: 1; transform: translateX(0); }
+}
+
+/* Footer */
+footer {
+    background: #0f3460;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #ff5733;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #16213e;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        left: 0;
+        right: 10px;
+        text-align: left;
+        border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+   
+    .nav-links.show {
+        display: block;
+    }
+}

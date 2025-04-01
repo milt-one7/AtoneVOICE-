@@ -1,0 +1,151 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.exp-header {
+    background: rgba(15, 52, 96, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.exp-header h1 {
+    font-size: 32px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.exp-header p {
+    font-size: 18px;
+    color: #ffcc00;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Timeline Container */
+.experience-container {
+    width: 80%;
+    margin: 50px auto;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    background: #0f3460;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Alternating Left & Right Timeline */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: left;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: right;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background: #ffcc00;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #ffcc00;
+    animation: pulse 1.5s infinite;
+}
+
+/* Hover Effect */
+.timeline-item:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+/* Back Button */
+a {
+    display: inline-block;
+    margin: 20px;
+    padding: 12px 24px;
+    background: #ffcc00;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+a:hover {
+    background: #ff5733;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0px 0px 10px #ffcc00;
+    }
+    50% {
+        box-shadow: 0px 0px 20px #ffcc00;
+    }
+    100% {
+        box-shadow: 0px 0px 10px #ffcc00;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 90%;
+        left: 5% !important;
+        text-align: center;
+    }
+
+    .timeline-dot {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
